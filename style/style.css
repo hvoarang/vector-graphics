@@ -76,13 +76,13 @@ a {
   max-width: 1260px;
   max-height: 100%;
 
-  background-size: 30%;
+  background-size: 31%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
   height: 580px;
   border-radius: 18px;
-  background-image: linear-gradient(to top, rgba(245, 245, 245, 0.5), rgba(0, 0, 0, 0.5)), url('../images/koi.png');
+  background-image: linear-gradient(rgba(245, 245, 245, 0.5), rgba(0, 0, 0, 0.5)), url('../images/koi.png');
 }
 
 /* ==================================== */
