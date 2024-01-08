@@ -360,7 +360,7 @@
             &lt;/svg&gt;
           </p>
         </div>
-        <h3 class="title">Элемент &lt;rect&gt;</h3>
+        <h3 class="title">Элемент &lt;rect &gt;</h3>
         <p>
           Создаёт прямоугольную область. Нарисуем прямоугольник 250x150 пикселей
           и добавим следующие характеристики.
@@ -381,6 +381,222 @@
             другое будет идентично.
           </li>
         </ul>
+        <div class="bg">
+          <p>index.html</p>
+          <p>
+            &lt;svg width=&quot;400&quot; height=&quot;300&quot;
+            style=&quot;outline: 1px solid black;&quot;&gt; <br />
+            &lt;rect <br />
+            width=&quot;250&quot; <br />
+            height=&quot;150&quot; <br />
+            fill=&quot;tomato&quot; <br />
+            stroke=&quot;black&quot; <br />
+            stroke-width=&quot;4&quot; <br />
+            x=&quot;20&quot; <br />
+            y=&quot;20&quot; <br />
+            rx=&quot;40&quot; <br />
+            /&gt; <br />
+            &lt;/svg&gt; <br />
+          </p>
+        </div>
+        <p>
+          Нарисуем еще один прямоугольник и разместим его в нижней правой части
+          холста. Новая фигура перекроет первый прямоугольник, потому что фигуры
+          располагаются как в слоёном пироге - ниже в разметке значит выше в
+          слоях на холсте.
+        </p>
+        <svg width="400" height="300" style="outline: 2px dashed #2a2a2a">
+          <rect
+            width="250"
+            height="150"
+            fill="tomato"
+            stroke="#2a2a2a"
+            stroke-width="4"
+            x="20"
+            y="20"
+            rx="40"
+          />
+          <rect
+            width="250"
+            height="150"
+            fill="orange"
+            stroke="#2a2a2a"
+            stroke-width="4"
+            x="120"
+            y="120"
+            rx="60"
+            ry="30"
+          />
+        </svg>
+        <h3 class="title">Элемент &lt;circle &gt;</h3>
+        <p>
+          Создаёт окружность, радиус которой задаётся атрибутом r. Нарисуем эту
+          фигуру размером 100x100 пикселей, дадим ей рамку и зальём цветом.
+          Получится окружность с центром в верхнем левом углу, большая часть
+          которой скрыта, так как находится за холстом.
+        </p>
+        <div class="bg">
+          <p>
+            &lt;svg width=&quot;400&quot; height=&quot;300&quot;
+            style=&quot;outline: 2px dashed #2a2a2a;&quot;&gt; <br />
+            &lt;circle r=&quot;100&quot; fill=&quot;tomato&quot;
+            stroke=&quot;#2a2a2a&quot; stroke-width=&quot;4&quot; /&gt; <br />
+            &lt;/svg&gt;
+          </p>
+        </div>
+        <p>
+          Координаты центра окружности на холсте задаются атрибутами cx (center
+          x) и cy (center y).
+        </p>
+        <svg width="400" height="300" style="outline: 2px dashed #2a2a2a">
+          <circle
+            r="100"
+            cx="200"
+            cy="150"
+            fill="tomato"
+            stroke="#2a2a2a"
+            stroke-width="4"
+          />
+        </svg>
+        <h3 class="title">Элемент &lt;ellipse &gt;</h3>
+        <p>
+          Создаёт элипс. Горизонтальный и вертикальный радиус задаётся
+          атрибутами rx и ry. Остальные атрибуты совпадают с элементом
+          &lt;circle &gt;. Нарисуем элипс 150x100 пикселей, дадим ему рамку и
+          зальём цветом.
+        </p>
+        <svg width="400" height="300" style="outline: 2px dashed #2a2a2a">
+          <ellipse
+            rx="150"
+            ry="100"
+            cx="200"
+            cy="150"
+            fill="tomato"
+            stroke="#2a2a2a"
+            stroke-width="4"
+          />
+        </svg>
+        <h3 class="title">Элемент &lt;line &gt;</h3>
+        <p>
+          Создаёт прямую линию. Атрибуты x1 и y1 указывают точку начала линии, а
+          x2 и y2 её конец. Нарисуем на холсте иконку гамбургер-меню из трёх
+          паралельных горизонтальных линий.
+        </p>
+        <div class="bg">
+          <p>
+            &lt;svg width=&quot;400&quot; height=&quot;300&quot;
+            style=&quot;outline: 2px dashed #2a2a2a;&quot;&gt; <br />
+            &lt;line x1=&quot;20&quot; y1=&quot;50&quot; x2=&quot;380&quot;
+            y2=&quot;50&quot; stroke=&quot;#2a2a2a&quot;
+            stroke-width=&quot;16&quot; /&gt; <br />
+            &lt;line x1=&quot;20&quot; y1=&quot;80&quot; x2=&quot;380&quot;
+            y2=&quot;80&quot; stroke=&quot;#2a2a2a&quot;
+            stroke-width=&quot;16&quot; /&gt; <br />
+            &lt;line x1=&quot;20&quot; y1=&quot;110&quot; x2=&quot;380&quot;
+            y2=&quot;110&quot; stroke=&quot;#2a2a2a&quot;
+            stroke-width=&quot;16&quot; /&gt; <br />
+            &lt;/svg&gt;
+          </p>
+        </div>
+        <svg width="400" height="165" style="outline: 2px dashed #2a2a2a">
+          <line
+            x1="20"
+            y1="50"
+            x2="380"
+            y2="50"
+            stroke="#2a2a2a"
+            stroke-width="16"
+          />
+          <line
+            x1="20"
+            y1="80"
+            x2="380"
+            y2="80"
+            stroke="#2a2a2a"
+            stroke-width="16"
+          />
+          <line
+            x1="20"
+            y1="110"
+            x2="380"
+            y2="110"
+            stroke="#2a2a2a"
+            stroke-width="16"
+          />
+        </svg>
+        <h3 class="title">Элемент &lt;polygon &gt;</h3>
+        <p>
+          Описывает многоугольник, вид которого определяется атрибутом points -
+          набором точек в виде координат линий, которые разделены на группы.
+        </p>
+
+        <div class="bg">
+          <p>
+            &lt;svg width=&quot;600&quot; height=&quot;300&quot;
+            style=&quot;outline: 2px dashed #2a2a2a;&quot;&gt; <br />
+            &lt;polygon <br />
+            points=&quot;20,20 20,200 200,200 200,20&quot; <br />
+            fill=&quot;orange&quot; <br />
+            stroke=&quot;#2a2a2a&quot; <br />
+            stroke-width=&quot;4&quot; <br />
+            /&gt; <br />
+            &lt;/svg&gt;
+          </p>
+        </div>
+        <p>
+          Первая цифра группы - координата x, вторая цифра после запятой –
+          координата y. Первая группа цифр определяет координаты начала первой
+          линии, вторая группа определяет конец первой линии и одновременно
+          начало второй линии и т. д. Полигон это замкнутая фигура, поэтому
+          последняя замыкающая линия добавляется автоматически, соединяя конец
+          последней линии с началом первой линии фигуры.
+        </p>
+        <svg width="600" height="300" style="outline: 2px dashed #2a2a2a">
+          <!-- Квадрат -->
+          <polygon
+            points="20,20 20,200 200,200 200,20"
+            fill="orange"
+            stroke="#2a2a2a"
+            stroke-width="4"
+          />
+
+          <!-- Трехугольник -->
+          <polygon
+            points="250,20 250,200 400,200"
+            fill="skyblue"
+            stroke="#2a2a2a"
+            stroke-width="4"
+          />
+
+          <!-- Параллелограмм -->
+          <polygon
+            points="430,20 430,200 550,250 550, 70"
+            fill="palevioletred"
+            stroke="#2a2a2a"
+            stroke-width="4"
+          />
+        </svg>
+        <h3 class="title">Элемент &lt;path &gt;</h3>
+        <p>
+          Универсальный элемент для представления фигур любой сложности. Все
+          SVG-иконки, экспортируемые дизайнером, описаны этим элементом. Атрибут
+          d содержит набор координат и соединяющих их кривых, определяющих
+          направление линий. Вручную редакторивать path не нужно. Иконки
+          рисуются в специальных редакторах, которые при экспорте заполняют path
+          и другие элементы и их атрибуты.
+        </p>
+        <svg
+          viewBox="0 -10 511.991 511"
+          xmlns="http://www.w3.org/2000/svg"
+          width="300"
+          height="300"
+          style="outline: 2px dashed #2a2a2a"
+        >
+          <path
+            d="M510.652 185.883a27.177 27.177 0 00-23.402-18.688l-147.797-13.418-58.41-136.75C276.73 6.98 266.918.497 255.996.497s-20.738 6.483-25.023 16.53l-58.41 136.75-147.82 13.418c-10.837 1-20.013 8.34-23.403 18.688a27.25 27.25 0 007.937 28.926L121 312.773 88.059 457.86c-2.41 10.668 1.73 21.7 10.582 28.098a27.087 27.087 0 0015.957 5.184 27.14 27.14 0 0013.953-3.86l127.445-76.203 127.422 76.203a27.197 27.197 0 0029.934-1.324c8.851-6.398 12.992-17.43 10.582-28.098l-32.942-145.086 111.723-97.964a27.246 27.246 0 007.937-28.926zM258.45 409.605"
+            fill="#2a2a2a"
+          />
+        </svg>
       </div>
     </header>
     <script src="./js/script.js"></script>
