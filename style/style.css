@@ -14,7 +14,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 a,
@@ -50,10 +49,11 @@ a {
   text-align: left;
 
   border-radius: 8px;
+  padding-top: 0;
 }
 
 .title {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding: 30px;
   text-align: center;
 }
