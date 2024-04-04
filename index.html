@@ -1012,6 +1012,102 @@
           stroke-opacity: 0.7; <br />
           }
         </p>
+
+        <h3 class="title">Декоративный оверлей</h3>
+        Свойство <b>overflow</b> со значением <b>hidden</b> используется при
+        создании декоративных эффектов с появлением скрытого контента из-за
+        границ блока.
+        <h1>Наведи курсор мыши на квадрат</h1>
+
+        <div class="box">
+          <div class="box__overlay">
+            <p>
+              Это содержимое скрыто посредством трансформации и появляется
+              только при наведении курсора на <code>.box__overlay</code>
+            </p>
+          </div>
+        </div>
+        <p>
+          Такой эффект реализуется в несколько простых шагов. Разберём стили для
+          создания эффекта, полный код смотрите в живом примере.
+        </p>
+        <p class="bg">
+          &lt;div class=&quot;box&quot;&gt; <br />
+          &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt; <br />
+          &lt;/div&gt;
+        </p>
+        <p>
+          Вначале абсолютно позиционируем <b>div.box__overlay</b> относительно
+          <b>div.box</b> и растягиваем его на всю ширину и высоту
+          <b>div.box</b>.
+        </p>
+        <p class="bg">
+          .box { <br />
+          position: relative; <br />
+          } <br /><br />
+
+          .overlay {<br />
+          position: absolute;<br />
+          top: 0;<br />
+          left: 0;<br />
+          width: 100%;<br />
+          height: 100%;<br />
+          }
+        </p>
+        <p class="bg">
+          Используя свойство <b>transform</b> и <b>translateX</b>, смещаем
+          <b>div.box__overlay</b> влево на <b>100%</b> его ширины. Трансформации
+          будем детально рассматривать дальше.
+        </p>
+        <p class="bg">
+          .box__overlay { <br />
+          position: absolute; <br />
+          top: 0;<br />
+          left: 0;<br />
+          width: 100%;<br />
+          height: 100%;<br />
+
+          transform: translateX(-100%);<br />
+          }
+        </p>
+        <p>
+          При ховере по <b>div.box</b>, используя <b>transform</b> и
+          <b>translateX</b>, возвращаем <b>div.box__overlay</b> в исходное
+          положение.
+        </p>
+        <p class="bg">
+          .box:hover .box__overlay { <br />
+          transform: translateX(0); <br />
+          }
+        </p>
+        <p>
+          Задаём <b>div.box</b> свойство <b>overflow</b> со значением
+          <b>hidden</b>, чтобы визуально спрятать <b>div.box__overlay</b>, когда
+          тот смещён за пределы <b>div.box</b>.
+        </p>
+        <p class="bg">
+          .box { <br />
+          position: relative; <br />
+          overflow: hidden; <br />
+          }
+        </p>
+        <p>
+          Cейчас просто используем одно свойство для визуализации появления
+          оверлея. Добавляем <b>div.box__overlay</b> переход для анимации
+          свойства <b>transform</b>.
+        </p>
+        <p class="bg">
+          .box__overlay { <br />
+          position: absolute;<br />
+          top: 0;<br />
+          left: 0;<br />
+          width: 100%;<br />
+          height: 100%;<br />
+
+          transform: translateX(-100%);<br />
+          transition: transform 250ms ease;<br />
+          }
+        </p>
       </div>
     </header>
     <script src="./js/script.js"></script>
