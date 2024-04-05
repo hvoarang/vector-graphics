@@ -4,3 +4,4 @@ function age(...args) {
 age(10);
 let a = 10;
 console.log(a);
+const door = 1;
